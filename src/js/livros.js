@@ -72,6 +72,31 @@ const saveLivro = () => {
             closeModal()
         }
     }
+
+//     fetch('/api/livros', {
+//         method: 'POST',
+//         headers: {
+//           'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify(livro)
+//       })
+//       .then(response => {
+//         if (!response.ok) {
+//           console.error('Erro na resposta do servidor:', response.status, response.statusText);
+//           return response.text().then(text => { throw new Error(`Erro na requisição: ${response.status} - ${text}`); });
+//         }
+//         return response.json();
+//       })
+//       .then(data => {
+//         console.log('Sucesso:', data);
+//         alert('Dados enviados com sucesso!');
+//         document.getElementById('meuFormulario').reset();
+//       })
+//       .catch((error) => {
+//         console.error('Erro:', error);
+//         alert('Ocorreu um erro ao enviar os dados.');
+//       });
+// }
 }
 
 //Tabela de Apresentação

@@ -1,11 +1,28 @@
-const mysql = require('mysql2/promise');
 
-const connection = mysql.createPool({
-    host:"localhost",
-    port: 3003,
-    user:"root",
-    password:"root",
-    database:"sakila"
+//Importar o Mysql
+const mysql = require("mysql2")
+
+//Configuração de conexão
+const conexao = mysql.createConnection({
+  host:"localhost",
+  port: 3306,
+  user:"root",
+  password:"admin",
+  database:"sakita"
 })
 
-module.exports = connection;
+conexao.connect((err) => {
+  if (err) throw err;
+  console.log('✅ Conectado ao MySQL!');
+});
+
+conexao.end((err)=>{
+  if(err){
+      console.log("Erro ao finalizar",err)
+      return;
+  }
+
+})
+
+module.exports = conexao;
+
